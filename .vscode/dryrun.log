@@ -1,0 +1,5 @@
+make test -f /media/adel/1E9A1F939A1F6695/cs-path/gameDev/computerGraphics/rayTracer/Makefile --dry-run --keep-going --print-directory
+make: Entering directory '/media/adel/1E9A1F939A1F6695/cs-path/gameDev/computerGraphics/rayTracer'
+g++ -pedantic -g -I ./include src/test.cpp src/Vector3.cpp src/Point3.cpp src/Point2.cpp src/Normal3.cpp -o ./bin/test
+make: Leaving directory '/media/adel/1E9A1F939A1F6695/cs-path/gameDev/computerGraphics/rayTracer'
+ 
