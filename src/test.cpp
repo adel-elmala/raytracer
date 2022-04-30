@@ -10,27 +10,33 @@
 
 #include "World.h"
 
+const double PI = 3.14159265359;
+
+void buildScene(World &w);
+
 int main(int argc, const char *argv[])
 {
-    // Sphere 1 -- red
-    Sphere *p1 = new Sphere;
-    p1->center = Point3(0.0, 20.0, -80.0);
-    p1->radius = 20.0f;
-    p1->color = RGBColor(1.0f, 0.0f, 0.0f);
+    // // Sphere 1 -- red
+    // Sphere *p1 = new Sphere;
+    // p1->center = Point3(0.0, 20.0, -80.0);
+    // p1->radius = 20.0f;
+    // p1->color = RGBColor(1.0f, 0.0f, 0.0f);
 
-    // Sphere 2 -- yellow
-    Sphere *p2 = new Sphere;
-    p2->center = Point3(-15.0, 12.0, -40.0);
-    p2->radius = 20.0f;
-    p2->color = RGBColor(1.0f, 1.0f, 0.0f);
+    // // Sphere 2 -- yellow
+    // Sphere *p2 = new Sphere;
+    // p2->center = Point3(-15.0, 12.0, -40.0);
+    // p2->radius = 20.0f;
+    // p2->color = RGBColor(1.0f, 1.0f, 0.0f);
+
     // camera
     Camera cam;
 
     // build World
     World w;
-    w.objects.push_back(p1);
-    w.objects.push_back(p2);
-    w.backGroundColor = RGBColor(0.5f, 0.5f, 0.5f);
+    buildScene(w);
+    // w.objects.push_back(p1);
+    // w.objects.push_back(p2);
+    w.backGroundColor = RGBColor(0.2f, 0.2f, 0.2f);
     w.camera = cam;
 
     for (int x = 0; x < (cam.vp->nCols); ++x)
@@ -40,8 +46,12 @@ int main(int argc, const char *argv[])
             Ray r;
             float xPix = cam.vp->pixelSize * (x - (((cam.vp->nCols)) / 2.0) + 0.5);
             float yPix = cam.vp->pixelSize * (y - (((cam.vp->nRows)) / 2.0) + 0.5);
-            r.origin = cam.eye + Vector3(xPix, yPix, -(cam.vp->distance));
-            r.direction = Vector3(0.0, 0.0, -1.0);
+            // --------Orthographic camera
+            // r.origin = cam.eye + Vector3(xPix, yPix, -(cam.vp->distance));
+            // r.direction = Vector3(0.0,0.0,-1.0);
+            // --------Prespective camera
+            r.origin = cam.eye ;
+            r.direction = Point3(xPix, yPix, -(cam.vp->distance)) - cam.eye;
             double tmin = DBL_MAX;
             bool hit = false;
             for (int i = 0; i < w.objects.size(); ++i)
@@ -59,6 +69,28 @@ int main(int argc, const char *argv[])
     cam.vp->drawImg();
 
     return 0;
+}
+
+void buildScene(World &w)
+{
+    // sample points on a circle
+    double nSamples = 10.0;
+    double radius = 10; // ++
+    double z = -30; // -- 
+    for (int i = 1; i <= nSamples; ++i)
+    {
+        double theta = double(360 * i) / nSamples;
+        double x = radius * cos(theta * (PI / 180));
+        double y = radius * sin(theta * (PI / 180));
+        Sphere *p = new Sphere;
+        p->center = Point3(x, y, z - i * 5);
+        // p->center = Point3(x, y, z );
+        radius += 5;
+        // z -= 5;
+        p->radius = 10 ;
+        p->color = RGBColor((float)rand() / RAND_MAX, (float)rand() / RAND_MAX, (float)rand() / RAND_MAX);
+        w.objects.push_back(p);
+    }
 }
 
 void test(void)

@@ -6,12 +6,12 @@
 
 ViewPlane::ViewPlane(void)
 {
-    distance = 10;
-    nCols = 721*4;
-    nRows = 481*4;
+    distance = 250;
+    nCols = 721;
+    nRows = 481;
     // nRows = 7;
     // nCols = 7;
-    pixelSize = 1.0f / 4;
+    pixelSize = 1.0f;
     nSamplesPerPixel = 1.0; // no anti-aliasing for now
     channelsPerPixel = 3;
     pImgData = (unsigned char *)malloc(sizeof(char) * nRows * nCols * channelsPerPixel);
