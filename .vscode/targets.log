@@ -1,15 +1,14 @@
-make all -f /media/adel/1E9A1F939A1F6695/cs-path/gameDev/computerGraphics/rayTracer/Makefile --print-data-base --no-builtin-variables --no-builtin-rules --question
+make all -f /media/adel/1E9A1F939A1F6695/cs-path/gameDev/computerGraphics/raytracer/Makefile --print-data-base --no-builtin-variables --no-builtin-rules --question
 make: *** No rule to make target 'all'.  Stop.
- 
+
 # GNU Make 4.2.1
 # Built for x86_64-pc-linux-gnu
 # Copyright (C) 1988-2016 Free Software Foundation, Inc.
 # License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
- 
 
-# Make data base, printed on Sat Mar 12 18:38:54 2022
+# Make data base, printed on Sat Apr 30 16:07:31 2022
 
 # Variables
 
@@ -42,7 +41,7 @@ GDMSESSION = ubuntu
 # environment
 XMODIFIERS = @im=ibus
 # makefile
-CURDIR := /media/adel/1E9A1F939A1F6695/cs-path/gameDev/computerGraphics/rayTracer
+CURDIR := /media/adel/1E9A1F939A1F6695/cs-path/gameDev/computerGraphics/raytracer
 # makefile
 SHELL = /bin/sh
 # environment
@@ -50,11 +49,11 @@ VTE_VERSION = 6003
 # environment
 VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
 # environment
-JOURNAL_STREAM = 8:39994
+JOURNAL_STREAM = 8:38282
 # environment
 XDG_CONFIG_DIRS = /etc/xdg/xdg-ubuntu:/etc/xdg
-# makefile (from '/media/adel/1E9A1F939A1F6695/cs-path/gameDev/computerGraphics/rayTracer/Makefile', line 1)
-MAKEFILE_LIST :=  /media/adel/1E9A1F939A1F6695/cs-path/gameDev/computerGraphics/rayTracer/Makefile
+# makefile (from '/media/adel/1E9A1F939A1F6695/cs-path/gameDev/computerGraphics/raytracer/Makefile', line 1)
+MAKEFILE_LIST :=  /media/adel/1E9A1F939A1F6695/cs-path/gameDev/computerGraphics/raytracer/Makefile
 # automatic
 @F = $(notdir $@)
 # environment
@@ -68,19 +67,19 @@ MANDATORY_PATH = /usr/share/gconf/ubuntu.mandatory.path
 # environment
 XDG_DATA_DIRS = /usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop
 # environment
-DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus,guid=7e98d25ce34ea8bd415a8601622c7c5b
+DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus,guid=3dee5421accca80557c8a2fd626d19be
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
 _ = /usr/bin/code
 # environment
-MANAGERPID = 1321
+MANAGERPID = 1332
 # environment
 LESSOPEN = | /usr/bin/lesspipe %s
 # environment
 LC_NAME = en_CA.UTF-8
 # environment
-VSCODE_CWD = /media/adel/1E9A1F939A1F6695/cs-path/gameDev/computerGraphics/rayTracer
+VSCODE_CWD = /media/adel/1E9A1F939A1F6695/cs-path/gameDev/computerGraphics/raytracer
 # default
 MAKE_HOST := x86_64-pc-linux-gnu
 # environment
@@ -88,7 +87,7 @@ PATH = /home/adel/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/
 # environment
 GPG_AGENT_INFO = /run/user/1000/gnupg/S.gpg-agent:0:1
 # environment
-SESSION_MANAGER = local/adel:@/tmp/.ICE-unix/1664,unix/adel:/tmp/.ICE-unix/1664
+SESSION_MANAGER = local/adel:@/tmp/.ICE-unix/1727,unix/adel:/tmp/.ICE-unix/1727
 # environment
 XDG_RUNTIME_DIR = /run/user/1000
 # environment
@@ -98,7 +97,7 @@ VSCODE_LOG_STACK = false
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
-INVOCATION_ID = 489ae13eb3344af5871bda7fb275113f
+INVOCATION_ID = 89cc784a61b9470298d5f5a6f5864db5
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
@@ -114,11 +113,11 @@ DISPLAY = :0
 # environment
 VSCODE_PIPE_LOGGING = true
 # environment
-PWD = /media/adel/1E9A1F939A1F6695/cs-path/gameDev/computerGraphics/rayTracer
+PWD = /media/adel/1E9A1F939A1F6695/cs-path/gameDev/computerGraphics/raytracer
 # default
 .LOADED := 
 # environment
-SSH_AGENT_PID = 1628
+SSH_AGENT_PID = 1613
 # environment
 ORIGINAL_XDG_CURRENT_DESKTOP = ubuntu:GNOME
 # environment
@@ -132,11 +131,11 @@ LESSCLOSE = /usr/bin/lesspipe %s %s
 # environment
 VSCODE_CLI = 1
 # environment
-VSCODE_CODE_CACHE_PATH = /home/adel/.config/Code/CachedData/b5205cc8eb4fbaa726835538cd82372cc0222d43
+VSCODE_CODE_CACHE_PATH = /home/adel/.config/Code/CachedData/c722ca6c7eed3d7987c0d5c3df5c45f6b15e77d1
 # environment
 LOGNAME = adel
 # environment
-APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
 # automatic
 +F = $(notdir $+)
 # environment
@@ -159,12 +158,12 @@ MAKECMDGOALS := all
 QT_IM_MODULE = ibus
 # environment
 SHLVL = 1
-# makefile (from '/media/adel/1E9A1F939A1F6695/cs-path/gameDev/computerGraphics/rayTracer/Makefile', line 3)
+# makefile (from '/media/adel/1E9A1F939A1F6695/cs-path/gameDev/computerGraphics/raytracer/Makefile', line 3)
 CC = g++
 # environment
 GNOME_SHELL_SESSION_MODE = ubuntu
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-acbe6b37-9982-43c5-85d6-b50daba45cbc.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-8137c333-3509-413b-ba38-9e2d360b58f2.sock
 # environment
 OMP_NUM_THREADS = 4
 # default
@@ -175,7 +174,7 @@ USER = adel
 LC_MONETARY = en_CA.UTF-8
 # makefile
 .DEFAULT_GOAL := test
-# makefile (from '/media/adel/1E9A1F939A1F6695/cs-path/gameDev/computerGraphics/rayTracer/Makefile', line 5)
+# makefile (from '/media/adel/1E9A1F939A1F6695/cs-path/gameDev/computerGraphics/raytracer/Makefile', line 5)
 INCLUDE = -I ./include
 # environment
 XDG_CURRENT_DESKTOP = Unity
@@ -192,7 +191,7 @@ GIT_PS1_SHOWDIRTYSTATE = 1
 # automatic
 *F = $(notdir $*)
 # environment
-VSCODE_IPC_HOOK = /run/user/1000/vscode-d82c17a2-1.65.0-main.sock
+VSCODE_IPC_HOOK = /run/user/1000/vscode-d82c17a2-1.65.2-main.sock
 # makefile
 MAKEFLAGS = pqrR
 # environment
@@ -224,14 +223,14 @@ LC_ALL = C
 # environment
 DBUS_STARTER_BUS_TYPE = session
 # environment
-GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/cc45189f_36b5_4611_813d_f21e0bf4ed46
+GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/2223c93b_e172_4757_aa63_a89255d8b14d
 # automatic
 ^F = $(notdir $^)
 # environment
-GNOME_TERMINAL_SERVICE = :1.98
+GNOME_TERMINAL_SERVICE = :1.94
 # default
 SUFFIXES := 
-# makefile (from '/media/adel/1E9A1F939A1F6695/cs-path/gameDev/computerGraphics/rayTracer/Makefile', line 4)
+# makefile (from '/media/adel/1E9A1F939A1F6695/cs-path/gameDev/computerGraphics/raytracer/Makefile', line 4)
 FLAGS = -pedantic -g
 # environment
 CHROME_DESKTOP = code-url-handler.desktop
@@ -250,9 +249,9 @@ LANG = C
 # environment
 TERM = xterm-256color
 # environment
-VSCODE_PID = 4595
+VSCODE_PID = 3910
 # environment
-DBUS_STARTER_ADDRESS = unix:path=/run/user/1000/bus,guid=7e98d25ce34ea8bd415a8601622c7c5b
+DBUS_STARTER_ADDRESS = unix:path=/run/user/1000/bus,guid=3dee5421accca80557c8a2fd626d19be
 # variable set hash-table stats:
 # Load=120/1024=12%, Rehash=0, Collisions=19/145=13%
 
@@ -271,15 +270,27 @@ DBUS_STARTER_ADDRESS = unix:path=/run/user/1000/bus,guid=7e98d25ce34ea8bd415a860
 
 # Files
 
+# Not a target:
+src/World.cpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
 setup:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from '/media/adel/1E9A1F939A1F6695/cs-path/gameDev/computerGraphics/rayTracer/Makefile', line 18):
+#  recipe to execute (from '/media/adel/1E9A1F939A1F6695/cs-path/gameDev/computerGraphics/raytracer/Makefile', line 23):
 	mkdir -p ./bin ./include ./src
 
 # Not a target:
 include/Vector3.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+include/GeometricObject.h:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
@@ -315,12 +326,36 @@ src/Vector3.cpp:
 #  Modification time never checked.
 #  File has not been updated.
 
-test: src/test.cpp src/Vector3.cpp include/Vector3.h src/Point3.cpp include/Point3.h src/Point2.cpp include/Point2.h src/Normal3.cpp include/Normal3.h
+# Not a target:
+include/Camera.h:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from '/media/adel/1E9A1F939A1F6695/cs-path/gameDev/computerGraphics/rayTracer/Makefile', line 13):
-	$(CC) $(FLAGS) $(INCLUDE) src/test.cpp src/Vector3.cpp src/Point3.cpp src/Point2.cpp src/Normal3.cpp -o ./bin/$@
+
+# Not a target:
+src/GeometricObject.cpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+test: src/test.cpp src/Vector3.cpp include/Vector3.h src/Point3.cpp include/Point3.h src/Point2.cpp include/Point2.h src/Normal3.cpp include/Normal3.h src/World.cpp include/World.h src/Camera.cpp include/Camera.h src/ViewPlane.cpp include/ViewPlane.h src/GeometricObject.cpp include/GeometricObject.h src/Sphere.cpp include/Sphere.h
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from '/media/adel/1E9A1F939A1F6695/cs-path/gameDev/computerGraphics/raytracer/Makefile', line 18):
+	$(CC) $(FLAGS) $(INCLUDE) src/test.cpp src/Sphere.cpp src/GeometricObject.cpp  src/ViewPlane.cpp src/World.cpp src/Camera.cpp src/RGBColor.cpp src/Vector3.cpp src/Point3.cpp src/Point2.cpp src/Normal3.cpp src/Ray.cpp -o ./bin/$@
+
+# Not a target:
+include/ViewPlane.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+include/Sphere.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 src/Normal3.cpp:
@@ -335,7 +370,19 @@ include/Point2.h:
 #  File has not been updated.
 
 # Not a target:
+src/Camera.cpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
 .DEFAULT:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+src/ViewPlane.cpp:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
@@ -344,21 +391,19 @@ include/Point2.h:
 include/Point3.h:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
- 
 #  File has not been updated.
 
 # Not a target:
-/media/adel/1E9A1F939A1F6695/cs-path/gameDev/computerGraphics/rayTracer/Makefile:
-#  Implicit rule search has been done.
-#  Last modified 2022-03-12 18:38:12.9366895
-#  File has been updated.
-#  Successfully updated.
+src/Sphere.cpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 clean:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from '/media/adel/1E9A1F939A1F6695/cs-path/gameDev/computerGraphics/rayTracer/Makefile', line 21):
+#  recipe to execute (from '/media/adel/1E9A1F939A1F6695/cs-path/gameDev/computerGraphics/raytracer/Makefile', line 26):
 	rm ./bin/*
 
 # Not a target:
@@ -366,6 +411,19 @@ src/Point2.cpp:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
+
+# Not a target:
+include/World.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/media/adel/1E9A1F939A1F6695/cs-path/gameDev/computerGraphics/raytracer/Makefile:
+#  Implicit rule search has been done.
+#  Last modified 2022-04-30 16:01:10.2014793
+#  File has been updated.
+#  Successfully updated.
 
 setup,clean:
 #  Phony target (prerequisite of .PHONY).
@@ -380,19 +438,19 @@ src/test.cpp:
 #  File has not been updated.
 
 # files hash-table stats:
-# Load=18/1024=2%, Rehash=0, Collisions=3/38=8%
+# Load=28/1024=3%, Rehash=0, Collisions=3/58=5%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 20 / storage = 317 B / avg = 15 B
-# current buf: size = 8162 B / used = 317 B / count = 20 / avg = 15 B
+# strcache buffers: 1 (0) / strings = 30 / storage = 499 B / avg = 16 B
+# current buf: size = 8162 B / used = 499 B / count = 30 / avg = 16 B
 
-# strcache performance: lookups = 27 / hit rate = 25%
+# strcache performance: lookups = 37 / hit rate = 18%
 # hash-table stats:
-# Load=20/8192=0%, Rehash=0, Collisions=0/27=0%
-# Finished Make data base on Sat Mar 12 18:38:54 2022
+# Load=30/8192=0%, Rehash=0, Collisions=0/37=0%
+# Finished Make data base on Sat Apr 30 16:07:31 2022
 
  
