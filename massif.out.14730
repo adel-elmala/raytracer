@@ -1,0 +1,798 @@
+desc: --stacks=yes
+cmd: ./bin/test
+time_unit: i
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=19517993
+mem_heap_B=2154310
+mem_heap_extra_B=250
+mem_stacks_B=1152
+heap_tree=empty
+#-----------
+snapshot=2
+#-----------
+time=43277100
+mem_heap_B=2154310
+mem_heap_extra_B=250
+mem_stacks_B=904
+heap_tree=empty
+#-----------
+snapshot=3
+#-----------
+time=82748295
+mem_heap_B=2154310
+mem_heap_extra_B=250
+mem_stacks_B=920
+heap_tree=empty
+#-----------
+snapshot=4
+#-----------
+time=109890298
+mem_heap_B=2154310
+mem_heap_extra_B=250
+mem_stacks_B=904
+heap_tree=empty
+#-----------
+snapshot=5
+#-----------
+time=129023245
+mem_heap_B=2154310
+mem_heap_extra_B=250
+mem_stacks_B=960
+heap_tree=empty
+#-----------
+snapshot=6
+#-----------
+time=155584451
+mem_heap_B=2154310
+mem_heap_extra_B=250
+mem_stacks_B=960
+heap_tree=empty
+#-----------
+snapshot=7
+#-----------
+time=192264233
+mem_heap_B=2154310
+mem_heap_extra_B=250
+mem_stacks_B=904
+heap_tree=empty
+#-----------
+snapshot=8
+#-----------
+time=232738654
+mem_heap_B=2154310
+mem_heap_extra_B=250
+mem_stacks_B=1104
+heap_tree=empty
+#-----------
+snapshot=9
+#-----------
+time=258035180
+mem_heap_B=2154310
+mem_heap_extra_B=250
+mem_stacks_B=1104
+heap_tree=empty
+#-----------
+snapshot=10
+#-----------
+time=278272414
+mem_heap_B=2154310
+mem_heap_extra_B=250
+mem_stacks_B=904
+heap_tree=empty
+#-----------
+snapshot=11
+#-----------
+time=308628224
+mem_heap_B=2154310
+mem_heap_extra_B=250
+mem_stacks_B=1152
+heap_tree=empty
+#-----------
+snapshot=12
+#-----------
+time=349103004
+mem_heap_B=2154310
+mem_heap_extra_B=250
+mem_stacks_B=1096
+heap_tree=empty
+#-----------
+snapshot=13
+#-----------
+time=381988771
+mem_heap_B=2154310
+mem_heap_extra_B=250
+mem_stacks_B=1104
+heap_tree=empty
+#-----------
+snapshot=14
+#-----------
+time=404755845
+mem_heap_B=2154310
+mem_heap_extra_B=250
+mem_stacks_B=912
+heap_tree=empty
+#-----------
+snapshot=15
+#-----------
+time=432582310
+mem_heap_B=2154310
+mem_heap_extra_B=250
+mem_stacks_B=920
+heap_tree=empty
+#-----------
+snapshot=16
+#-----------
+time=465468217
+mem_heap_B=2154310
+mem_heap_extra_B=250
+mem_stacks_B=904
+heap_tree=empty
+#-----------
+snapshot=17
+#-----------
+time=505943241
+mem_heap_B=2154310
+mem_heap_extra_B=250
+mem_stacks_B=1104
+heap_tree=detailed
+n3: 2154310 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2080806 0x1117FD: ViewPlane::ViewPlane() (ViewPlane.cpp:17)
+  n2: 2080806 0x1120D9: Camera::Camera() (Camera.cpp:8)
+   n0: 1040403 0x1094C7: main (test.cpp:32)
+   n1: 1040403 0x111CE2: World::World() (World.cpp:3)
+    n0: 1040403 0x109592: main (test.cpp:39)
+ n1: 72704 0x4908A99: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 72704 0x4011B89: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x4011C90: call_init (dl-init.c:30)
+    n1: 72704 0x4011C90: _dl_init (dl-init.c:119)
+     n0: 72704 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+ n0: 800 in 3 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=18
+#-----------
+time=526180721
+mem_heap_B=2154310
+mem_heap_extra_B=250
+mem_stacks_B=912
+heap_tree=empty
+#-----------
+snapshot=19
+#-----------
+time=551477670
+mem_heap_B=2154310
+mem_heap_extra_B=250
+mem_stacks_B=1104
+heap_tree=empty
+#-----------
+snapshot=20
+#-----------
+time=571715182
+mem_heap_B=2154310
+mem_heap_extra_B=250
+mem_stacks_B=1096
+heap_tree=empty
+#-----------
+snapshot=21
+#-----------
+time=597012059
+mem_heap_B=2154310
+mem_heap_extra_B=250
+mem_stacks_B=1152
+heap_tree=empty
+#-----------
+snapshot=22
+#-----------
+time=632427678
+mem_heap_B=2154310
+mem_heap_extra_B=250
+mem_stacks_B=1096
+heap_tree=empty
+#-----------
+snapshot=23
+#-----------
+time=667843309
+mem_heap_B=2154310
+mem_heap_extra_B=250
+mem_stacks_B=1104
+heap_tree=empty
+#-----------
+snapshot=24
+#-----------
+time=703258974
+mem_heap_B=2154310
+mem_heap_extra_B=250
+mem_stacks_B=904
+heap_tree=empty
+#-----------
+snapshot=25
+#-----------
+time=728555918
+mem_heap_B=2154310
+mem_heap_extra_B=250
+mem_stacks_B=904
+heap_tree=empty
+#-----------
+snapshot=26
+#-----------
+time=753852878
+mem_heap_B=2154310
+mem_heap_extra_B=250
+mem_stacks_B=1096
+heap_tree=empty
+#-----------
+snapshot=27
+#-----------
+time=779149851
+mem_heap_B=2154310
+mem_heap_extra_B=250
+mem_stacks_B=1096
+heap_tree=empty
+#-----------
+snapshot=28
+#-----------
+time=799387407
+mem_heap_B=2154310
+mem_heap_extra_B=250
+mem_stacks_B=904
+heap_tree=empty
+#-----------
+snapshot=29
+#-----------
+time=824684386
+mem_heap_B=2154310
+mem_heap_extra_B=250
+mem_stacks_B=1096
+heap_tree=empty
+#-----------
+snapshot=30
+#-----------
+time=860100147
+mem_heap_B=2154310
+mem_heap_extra_B=250
+mem_stacks_B=904
+heap_tree=detailed
+n3: 2154310 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2080806 0x1117FD: ViewPlane::ViewPlane() (ViewPlane.cpp:17)
+  n2: 2080806 0x1120D9: Camera::Camera() (Camera.cpp:8)
+   n0: 1040403 0x1094C7: main (test.cpp:32)
+   n1: 1040403 0x111CE2: World::World() (World.cpp:3)
+    n0: 1040403 0x109592: main (test.cpp:39)
+ n1: 72704 0x4908A99: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 72704 0x4011B89: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x4011C90: call_init (dl-init.c:30)
+    n1: 72704 0x4011C90: _dl_init (dl-init.c:119)
+     n0: 72704 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+ n0: 800 in 3 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=31
+#-----------
+time=880337745
+mem_heap_B=2154310
+mem_heap_extra_B=250
+mem_stacks_B=904
+heap_tree=empty
+#-----------
+snapshot=32
+#-----------
+time=910694139
+mem_heap_B=2154310
+mem_heap_extra_B=250
+mem_stacks_B=952
+heap_tree=detailed
+n3: 2154310 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2080806 0x1117FD: ViewPlane::ViewPlane() (ViewPlane.cpp:17)
+  n2: 2080806 0x1120D9: Camera::Camera() (Camera.cpp:8)
+   n0: 1040403 0x1094C7: main (test.cpp:32)
+   n1: 1040403 0x111CE2: World::World() (World.cpp:3)
+    n0: 1040403 0x109592: main (test.cpp:39)
+ n1: 72704 0x4908A99: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 72704 0x4011B89: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x4011C90: call_init (dl-init.c:30)
+    n1: 72704 0x4011C90: _dl_init (dl-init.c:119)
+     n0: 72704 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+ n0: 800 in 3 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=33
+#-----------
+time=946109931
+mem_heap_B=2154310
+mem_heap_extra_B=250
+mem_stacks_B=920
+heap_tree=empty
+#-----------
+snapshot=34
+#-----------
+time=976466312
+mem_heap_B=2154310
+mem_heap_extra_B=250
+mem_stacks_B=960
+heap_tree=detailed
+n3: 2154310 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2080806 0x1117FD: ViewPlane::ViewPlane() (ViewPlane.cpp:17)
+  n2: 2080806 0x1120D9: Camera::Camera() (Camera.cpp:8)
+   n0: 1040403 0x1094C7: main (test.cpp:32)
+   n1: 1040403 0x111CE2: World::World() (World.cpp:3)
+    n0: 1040403 0x109592: main (test.cpp:39)
+ n1: 72704 0x4908A99: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 72704 0x4011B89: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x4011C90: call_init (dl-init.c:30)
+    n1: 72704 0x4011C90: _dl_init (dl-init.c:119)
+     n0: 72704 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+ n0: 800 in 3 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=35
+#-----------
+time=996703894
+mem_heap_B=2154310
+mem_heap_extra_B=250
+mem_stacks_B=912
+heap_tree=empty
+#-----------
+snapshot=36
+#-----------
+time=1027060266
+mem_heap_B=2154310
+mem_heap_extra_B=250
+mem_stacks_B=1104
+heap_tree=empty
+#-----------
+snapshot=37
+#-----------
+time=1057416656
+mem_heap_B=2154310
+mem_heap_extra_B=250
+mem_stacks_B=1096
+heap_tree=empty
+#-----------
+snapshot=38
+#-----------
+time=1087773057
+mem_heap_B=2154310
+mem_heap_extra_B=250
+mem_stacks_B=1152
+heap_tree=empty
+#-----------
+snapshot=39
+#-----------
+time=1128248267
+mem_heap_B=2154310
+mem_heap_extra_B=250
+mem_stacks_B=1152
+heap_tree=empty
+#-----------
+snapshot=40
+#-----------
+time=1158604660
+mem_heap_B=2154310
+mem_heap_extra_B=250
+mem_stacks_B=1096
+heap_tree=empty
+#-----------
+snapshot=41
+#-----------
+time=1188961069
+mem_heap_B=2154310
+mem_heap_extra_B=250
+mem_stacks_B=1104
+heap_tree=empty
+#-----------
+snapshot=42
+#-----------
+time=1209198652
+mem_heap_B=2154310
+mem_heap_extra_B=250
+mem_stacks_B=904
+heap_tree=empty
+#-----------
+snapshot=43
+#-----------
+time=1239555052
+mem_heap_B=2154310
+mem_heap_extra_B=250
+mem_stacks_B=1152
+heap_tree=empty
+#-----------
+snapshot=44
+#-----------
+time=1280030246
+mem_heap_B=2154310
+mem_heap_extra_B=250
+mem_stacks_B=960
+heap_tree=detailed
+n3: 2154310 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2080806 0x1117FD: ViewPlane::ViewPlane() (ViewPlane.cpp:17)
+  n2: 2080806 0x1120D9: Camera::Camera() (Camera.cpp:8)
+   n0: 1040403 0x1094C7: main (test.cpp:32)
+   n1: 1040403 0x111CE2: World::World() (World.cpp:3)
+    n0: 1040403 0x109592: main (test.cpp:39)
+ n1: 72704 0x4908A99: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 72704 0x4011B89: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x4011C90: call_init (dl-init.c:30)
+    n1: 72704 0x4011C90: _dl_init (dl-init.c:119)
+     n0: 72704 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+ n0: 800 in 3 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=45
+#-----------
+time=1311533707
+mem_heap_B=3195194
+mem_heap_extra_B=270
+mem_stacks_B=1280
+heap_tree=detailed
+n4: 3195194 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2080806 0x1117FD: ViewPlane::ViewPlane() (ViewPlane.cpp:17)
+  n2: 2080806 0x1120D9: Camera::Camera() (Camera.cpp:8)
+   n0: 1040403 0x1094C7: main (test.cpp:32)
+   n1: 1040403 0x111CE2: World::World() (World.cpp:3)
+    n0: 1040403 0x109592: main (test.cpp:39)
+ n1: 1040884 0x10F0EE: stbi_write_png_to_mem (stb_image_write.h:1144)
+  n1: 1040884 0x10F745: stbi_write_png (stb_image_write.h:1219)
+   n1: 1040884 0x111965: ViewPlane::drawImg() (ViewPlane.cpp:41)
+    n0: 1040884 0x109A2C: main (test.cpp:76)
+ n1: 72704 0x4908A99: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 72704 0x4011B89: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x4011C90: call_init (dl-init.c:30)
+    n1: 72704 0x4011C90: _dl_init (dl-init.c:119)
+     n0: 72704 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+ n0: 800 in 3 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=46
+#-----------
+time=1352077544
+mem_heap_B=3197357
+mem_heap_extra_B=291
+mem_stacks_B=1240
+heap_tree=empty
+#-----------
+snapshot=47
+#-----------
+time=1392636206
+mem_heap_B=3197357
+mem_heap_extra_B=291
+mem_stacks_B=1208
+heap_tree=empty
+#-----------
+snapshot=48
+#-----------
+time=1423041618
+mem_heap_B=3197357
+mem_heap_extra_B=291
+mem_stacks_B=1208
+heap_tree=empty
+#-----------
+snapshot=49
+#-----------
+time=1443330103
+mem_heap_B=3197357
+mem_heap_extra_B=291
+mem_stacks_B=1240
+heap_tree=empty
+#-----------
+snapshot=50
+#-----------
+time=1462463072
+mem_heap_B=3197357
+mem_heap_extra_B=291
+mem_stacks_B=1328
+heap_tree=empty
+#-----------
+snapshot=51
+#-----------
+time=1481664347
+mem_heap_B=3197357
+mem_heap_extra_B=291
+mem_stacks_B=1240
+heap_tree=empty
+#-----------
+snapshot=52
+#-----------
+time=1500831978
+mem_heap_B=3197357
+mem_heap_extra_B=291
+mem_stacks_B=1208
+heap_tree=empty
+#-----------
+snapshot=53
+#-----------
+time=1519964943
+mem_heap_B=3197357
+mem_heap_extra_B=291
+mem_stacks_B=1320
+heap_tree=empty
+#-----------
+snapshot=54
+#-----------
+time=1539097893
+mem_heap_B=3197357
+mem_heap_extra_B=291
+mem_stacks_B=1320
+heap_tree=empty
+#-----------
+snapshot=55
+#-----------
+time=1558231210
+mem_heap_B=3197357
+mem_heap_extra_B=291
+mem_stacks_B=1208
+heap_tree=empty
+#-----------
+snapshot=56
+#-----------
+time=1577364173
+mem_heap_B=3197357
+mem_heap_extra_B=291
+mem_stacks_B=1320
+heap_tree=detailed
+n4: 3197357 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2080806 0x1117FD: ViewPlane::ViewPlane() (ViewPlane.cpp:17)
+  n2: 2080806 0x1120D9: Camera::Camera() (Camera.cpp:8)
+   n0: 1040403 0x1094C7: main (test.cpp:32)
+   n1: 1040403 0x111CE2: World::World() (World.cpp:3)
+    n0: 1040403 0x109592: main (test.cpp:39)
+ n1: 1040884 0x10F0EE: stbi_write_png_to_mem (stb_image_write.h:1144)
+  n1: 1040884 0x10F745: stbi_write_png (stb_image_write.h:1219)
+   n1: 1040884 0x111965: ViewPlane::drawImg() (ViewPlane.cpp:41)
+    n0: 1040884 0x109A2C: main (test.cpp:76)
+ n1: 72704 0x4908A99: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 72704 0x4011B89: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x4011C90: call_init (dl-init.c:30)
+    n1: 72704 0x4011C90: _dl_init (dl-init.c:119)
+     n0: 72704 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+ n0: 2963 in 4 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=57
+#-----------
+time=1596497149
+mem_heap_B=3197357
+mem_heap_extra_B=291
+mem_stacks_B=1320
+heap_tree=empty
+#-----------
+snapshot=58
+#-----------
+time=1613325446
+mem_heap_B=3326266
+mem_heap_extra_B=278
+mem_stacks_B=1424
+heap_tree=detailed
+n5: 3326266 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2080806 0x1117FD: ViewPlane::ViewPlane() (ViewPlane.cpp:17)
+  n2: 2080806 0x1120D9: Camera::Camera() (Camera.cpp:8)
+   n0: 1040403 0x1094C7: main (test.cpp:32)
+   n1: 1040403 0x111CE2: World::World() (World.cpp:3)
+    n0: 1040403 0x109592: main (test.cpp:39)
+ n1: 1040884 0x10F0EE: stbi_write_png_to_mem (stb_image_write.h:1144)
+  n1: 1040884 0x10F745: stbi_write_png (stb_image_write.h:1219)
+   n1: 1040884 0x111965: ViewPlane::drawImg() (ViewPlane.cpp:41)
+    n0: 1040884 0x109A2C: main (test.cpp:76)
+ n1: 131072 0x10D9B2: stbi_zlib_compress (stb_image_write.h:908)
+  n1: 131072 0x10F33D: stbi_write_png_to_mem (stb_image_write.h:1176)
+   n1: 131072 0x10F745: stbi_write_png (stb_image_write.h:1219)
+    n1: 131072 0x111965: ViewPlane::drawImg() (ViewPlane.cpp:41)
+     n0: 131072 0x109A2C: main (test.cpp:76)
+ n1: 72704 0x4908A99: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 72704 0x4011B89: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x4011C90: call_init (dl-init.c:30)
+    n1: 72704 0x4011C90: _dl_init (dl-init.c:119)
+     n0: 72704 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+ n0: 800 in 4 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=59
+#-----------
+time=1632462313
+mem_heap_B=3327569
+mem_heap_extra_B=407
+mem_stacks_B=1352
+heap_tree=empty
+#-----------
+snapshot=60
+#-----------
+time=1651599914
+mem_heap_B=3328337
+mem_heap_extra_B=407
+mem_stacks_B=1352
+heap_tree=empty
+#-----------
+snapshot=61
+#-----------
+time=1670732968
+mem_heap_B=3328337
+mem_heap_extra_B=407
+mem_stacks_B=1352
+heap_tree=empty
+#-----------
+snapshot=62
+#-----------
+time=1689866125
+mem_heap_B=3330929
+mem_heap_extra_B=591
+mem_stacks_B=1352
+heap_tree=empty
+#-----------
+snapshot=63
+#-----------
+time=1709000334
+mem_heap_B=3331073
+mem_heap_extra_B=575
+mem_stacks_B=1352
+heap_tree=empty
+#-----------
+snapshot=64
+#-----------
+time=1728134170
+mem_heap_B=3335369
+mem_heap_extra_B=695
+mem_stacks_B=1352
+heap_tree=empty
+#-----------
+snapshot=65
+#-----------
+time=1747268277
+mem_heap_B=3335369
+mem_heap_extra_B=695
+mem_stacks_B=1352
+heap_tree=empty
+#-----------
+snapshot=66
+#-----------
+time=1766405628
+mem_heap_B=3335705
+mem_heap_extra_B=647
+mem_stacks_B=1352
+heap_tree=empty
+#-----------
+snapshot=67
+#-----------
+time=1785542246
+mem_heap_B=3336113
+mem_heap_extra_B=743
+mem_stacks_B=1352
+heap_tree=empty
+#-----------
+snapshot=68
+#-----------
+time=1804675288
+mem_heap_B=3343265
+mem_heap_extra_B=903
+mem_stacks_B=1352
+heap_tree=detailed
+n5: 3343265 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2080806 0x1117FD: ViewPlane::ViewPlane() (ViewPlane.cpp:17)
+  n2: 2080806 0x1120D9: Camera::Camera() (Camera.cpp:8)
+   n0: 1040403 0x1094C7: main (test.cpp:32)
+   n1: 1040403 0x111CE2: World::World() (World.cpp:3)
+    n0: 1040403 0x109592: main (test.cpp:39)
+ n1: 1040884 0x10F0EE: stbi_write_png_to_mem (stb_image_write.h:1144)
+  n1: 1040884 0x10F745: stbi_write_png (stb_image_write.h:1219)
+   n1: 1040884 0x111965: ViewPlane::drawImg() (ViewPlane.cpp:41)
+    n0: 1040884 0x109A2C: main (test.cpp:76)
+ n1: 131072 0x10D9B2: stbi_zlib_compress (stb_image_write.h:908)
+  n1: 131072 0x10F33D: stbi_write_png_to_mem (stb_image_write.h:1176)
+   n1: 131072 0x10F745: stbi_write_png (stb_image_write.h:1219)
+    n1: 131072 0x111965: ViewPlane::drawImg() (ViewPlane.cpp:41)
+     n0: 131072 0x109A2C: main (test.cpp:76)
+ n1: 72704 0x4908A99: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 72704 0x4011B89: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x4011C90: call_init (dl-init.c:30)
+    n1: 72704 0x4011C90: _dl_init (dl-init.c:119)
+     n0: 72704 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+ n0: 17799 in 5 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=69
+#-----------
+time=1823810792
+mem_heap_B=3344201
+mem_heap_extra_B=983
+mem_stacks_B=1352
+heap_tree=empty
+#-----------
+snapshot=70
+#-----------
+time=1842948601
+mem_heap_B=3345329
+mem_heap_extra_B=1231
+mem_stacks_B=1352
+heap_tree=empty
+#-----------
+snapshot=71
+#-----------
+time=1862083644
+mem_heap_B=3345737
+mem_heap_extra_B=1319
+mem_stacks_B=1352
+heap_tree=empty
+#-----------
+snapshot=72
+#-----------
+time=1881217332
+mem_heap_B=3346721
+mem_heap_extra_B=1367
+mem_stacks_B=1352
+heap_tree=empty
+#-----------
+snapshot=73
+#-----------
+time=1900352810
+mem_heap_B=3347009
+mem_heap_extra_B=1335
+mem_stacks_B=1352
+heap_tree=empty
+#-----------
+snapshot=74
+#-----------
+time=1919489964
+mem_heap_B=3347009
+mem_heap_extra_B=1335
+mem_stacks_B=1352
+heap_tree=empty
+#-----------
+snapshot=75
+#-----------
+time=1938626620
+mem_heap_B=3347009
+mem_heap_extra_B=1335
+mem_stacks_B=1352
+heap_tree=empty
+#-----------
+snapshot=76
+#-----------
+time=1943710283
+mem_heap_B=3359297
+mem_heap_extra_B=1335
+mem_stacks_B=1520
+heap_tree=peak
+n5: 3359297 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2080806 0x1117FD: ViewPlane::ViewPlane() (ViewPlane.cpp:17)
+  n2: 2080806 0x1120D9: Camera::Camera() (Camera.cpp:8)
+   n0: 1040403 0x1094C7: main (test.cpp:32)
+   n1: 1040403 0x111CE2: World::World() (World.cpp:3)
+    n0: 1040403 0x109592: main (test.cpp:39)
+ n1: 1040884 0x10F0EE: stbi_write_png_to_mem (stb_image_write.h:1144)
+  n1: 1040884 0x10F745: stbi_write_png (stb_image_write.h:1219)
+   n1: 1040884 0x111965: ViewPlane::drawImg() (ViewPlane.cpp:41)
+    n0: 1040884 0x109A2C: main (test.cpp:76)
+ n1: 131072 0x10D9B2: stbi_zlib_compress (stb_image_write.h:908)
+  n1: 131072 0x10F33D: stbi_write_png_to_mem (stb_image_write.h:1176)
+   n1: 131072 0x10F745: stbi_write_png (stb_image_write.h:1219)
+    n1: 131072 0x111965: ViewPlane::drawImg() (ViewPlane.cpp:41)
+     n0: 131072 0x109A2C: main (test.cpp:76)
+ n1: 72704 0x4908A99: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 72704 0x4011B89: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x4011C90: call_init (dl-init.c:30)
+    n1: 72704 0x4011C90: _dl_init (dl-init.c:119)
+     n0: 72704 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+ n0: 33831 in 5 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=77
+#-----------
+time=1962847407
+mem_heap_B=3359297
+mem_heap_extra_B=1335
+mem_stacks_B=1352
+heap_tree=empty
+#-----------
+snapshot=78
+#-----------
+time=1981981782
+mem_heap_B=3359297
+mem_heap_extra_B=1335
+mem_stacks_B=1352
+heap_tree=empty
+#-----------
+snapshot=79
+#-----------
+time=2012034915
+mem_heap_B=3219777
+mem_heap_extra_B=287
+mem_stacks_B=1352
+heap_tree=empty

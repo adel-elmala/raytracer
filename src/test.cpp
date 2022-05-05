@@ -30,6 +30,10 @@ int main(int argc, const char *argv[])
 
     // camera
     Camera cam;
+    cam.eye = Point3(0.0, 0.0, 50.0);
+    cam.lookAt = Point3(0.0, 0.0, -30.0);
+    cam.vp->distance = 500;
+    cam.setup_uvw();
 
     // build World
     World w;
@@ -50,8 +54,9 @@ int main(int argc, const char *argv[])
             // r.origin = cam.eye + Vector3(xPix, yPix, -(cam.vp->distance));
             // r.direction = Vector3(0.0,0.0,-1.0);
             // --------Prespective camera
-            r.origin = cam.eye ;
-            r.direction = Point3(xPix, yPix, -(cam.vp->distance)) - cam.eye;
+            r.origin = cam.eye;
+            // r.direction = Point3(xPix, yPix, -(cam.vp->distance)) - cam.eye;
+            r.direction = xPix * (w.camera.u) + yPix * (w.camera.v) - ((cam.vp->distance) * (w.camera.w));
             double tmin = DBL_MAX;
             bool hit = false;
             for (int i = 0; i < w.objects.size(); ++i)
@@ -60,6 +65,8 @@ int main(int argc, const char *argv[])
                 {
                     hit = true;
                     cam.vp->drawPixel(w.objects[i]->color, y, x);
+                    
+                    // cam.vp->drawPixel((w.objects[i]->color)), y, x);
                 }
             }
             if (!hit)
@@ -76,7 +83,7 @@ void buildScene(World &w)
     // sample points on a circle
     double nSamples = 10.0;
     double radius = 10; // ++
-    double z = -30; // -- 
+    double z = -30;     // --
     for (int i = 1; i <= nSamples; ++i)
     {
         double theta = double(360 * i) / nSamples;
@@ -86,8 +93,8 @@ void buildScene(World &w)
         p->center = Point3(x, y, z - i * 5);
         // p->center = Point3(x, y, z );
         radius += 5;
-        // z -= 5;
-        p->radius = 10 ;
+        z -= 5;
+        p->radius = 10;
         p->color = RGBColor((float)rand() / RAND_MAX, (float)rand() / RAND_MAX, (float)rand() / RAND_MAX);
         w.objects.push_back(p);
     }

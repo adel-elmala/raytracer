@@ -24,3 +24,5 @@ setup:
 
 clean:
 	rm ./bin/*
+valgrind:
+	valgrind --leak-check=full --show-leak-kinds=all ./bin/test

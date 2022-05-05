@@ -19,8 +19,9 @@ ViewPlane::ViewPlane(void)
 
 ViewPlane::~ViewPlane()
 {
-    // free(pImgData);
-    // pImgData = NULL;
+    printf("viewplane deconstucted!!\n");
+    free(pImgData);
+    pImgData = NULL;
 }
 
 void ViewPlane::drawPixel(Pixel p, unsigned int row, unsigned int col)

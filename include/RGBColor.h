@@ -10,6 +10,11 @@ public:
     RGBColor(const RGBColor &color);
     RGBColor &operator=(const RGBColor &rhs);
     ~RGBColor();
+    RGBColor &operator+(const RGBColor &rhs);
+    RGBColor &operator-(const RGBColor &rhs);
+    RGBColor &operator*(float rhs);
+    void CorrectRange(void);
+
 };
 
 #endif

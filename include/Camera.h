@@ -17,6 +17,7 @@ public:
 
     Camera(void);
     ~Camera();
+    void setup_uvw();
     
     // virtual Vector3 rayDirection() = 0; // start with orthographic camera first
 };
