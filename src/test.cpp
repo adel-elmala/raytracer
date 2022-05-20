@@ -68,9 +68,9 @@ int main(int argc, const char *argv[])
                     cosAlpha = pow(cosAlpha, rec.phongExponent);
                     double cosTheta = (rec.n * lightDir);
                     cosTheta = MAX(0, cosTheta);
-                    double pixR = ((rec.diffuseColor.r) * (light.RedIntensity) * cosTheta); //+ ((rec.specularColor.r) * (light.RedIntensity) * cosAlpha);
-                    double pixG = ((rec.diffuseColor.g) * (light.GreenIntensity) * cosTheta); //+ ((rec.specularColor.g) * (light.GreenIntensity) * cosAlpha);
-                    double pixB = ((rec.diffuseColor.b) * (light.BlueIntensity) * cosTheta) ;//+ ((rec.specularColor.b) * (light.BlueIntensity) * cosAlpha);
+                    double pixR = ((rec.diffuseColor.r) * (light.RedIntensity) * cosTheta) + ((rec.specularColor.r) * (light.RedIntensity) * cosAlpha);
+                    double pixG = ((rec.diffuseColor.g) * (light.GreenIntensity) * cosTheta) + ((rec.specularColor.g) * (light.GreenIntensity) * cosAlpha);
+                    double pixB = ((rec.diffuseColor.b) * (light.BlueIntensity) * cosTheta) + ((rec.specularColor.b) * (light.BlueIntensity) * cosAlpha);
                     Pixel p = RGBColor(pixR, pixG, pixB);
                     cam.vp->drawPixel(p, y, x);
                     // cam.vp->drawPixel(w.objects[i]->color, y, x);
