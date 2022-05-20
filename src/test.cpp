@@ -7,26 +7,18 @@
 
 #include "Sphere.h"
 #include "Camera.h"
+#include "Light.h"
+#include "ShadeRec.h"
 
 #include "World.h"
 
 const double PI = 3.14159265359;
+#define MAX(n, m) (n >= m ? n : m)
 
 void buildScene(World &w);
 
 int main(int argc, const char *argv[])
 {
-    // // Sphere 1 -- red
-    // Sphere *p1 = new Sphere;
-    // p1->center = Point3(0.0, 20.0, -80.0);
-    // p1->radius = 20.0f;
-    // p1->color = RGBColor(1.0f, 0.0f, 0.0f);
-
-    // // Sphere 2 -- yellow
-    // Sphere *p2 = new Sphere;
-    // p2->center = Point3(-15.0, 12.0, -40.0);
-    // p2->radius = 20.0f;
-    // p2->color = RGBColor(1.0f, 1.0f, 0.0f);
 
     // camera
     Camera cam;
@@ -35,11 +27,12 @@ int main(int argc, const char *argv[])
     cam.vp->distance = 500;
     cam.setup_uvw();
 
+    // light
+    Light light;
+
     // build World
     World w;
     buildScene(w);
-    // w.objects.push_back(p1);
-    // w.objects.push_back(p2);
     w.backGroundColor = RGBColor(0.2f, 0.2f, 0.2f);
     w.camera = cam;
 
@@ -50,22 +43,38 @@ int main(int argc, const char *argv[])
             Ray r;
             float xPix = cam.vp->pixelSize * (x - (((cam.vp->nCols)) / 2.0) + 0.5);
             float yPix = cam.vp->pixelSize * (y - (((cam.vp->nRows)) / 2.0) + 0.5);
-            // --------Orthographic camera
+
+            // --------Orthographic camera--------
             // r.origin = cam.eye + Vector3(xPix, yPix, -(cam.vp->distance));
             // r.direction = Vector3(0.0,0.0,-1.0);
-            // --------Prespective camera
+
+            // --------Prespective camera--------
             r.origin = cam.eye;
             // r.direction = Point3(xPix, yPix, -(cam.vp->distance)) - cam.eye;
             r.direction = xPix * (w.camera.u) + yPix * (w.camera.v) - ((cam.vp->distance) * (w.camera.w));
             double tmin = DBL_MAX;
             bool hit = false;
+            ShadeRec rec;
             for (int i = 0; i < w.objects.size(); ++i)
             {
-                if (w.objects[i]->hit(r, tmin))
+                if (w.objects[i]->hit(r, tmin, rec))
                 {
                     hit = true;
-                    cam.vp->drawPixel(w.objects[i]->color, y, x);
-                    
+                    Vector3 lightDir = (light.pos - rec.hitPoint).hat();
+                    Vector3 viewDir = -((r.direction).hat());
+                    Vector3 h = (lightDir + viewDir).hat();
+                    double cosAlpha = (rec.n * h);
+                    cosAlpha = MAX(0, cosAlpha);
+                    cosAlpha = pow(cosAlpha, rec.phongExponent);
+                    double cosTheta = (rec.n * lightDir);
+                    cosTheta = MAX(0, cosTheta);
+                    double pixR = ((rec.diffuseColor.r) * (light.RedIntensity) * cosTheta); //+ ((rec.specularColor.r) * (light.RedIntensity) * cosAlpha);
+                    double pixG = ((rec.diffuseColor.g) * (light.GreenIntensity) * cosTheta); //+ ((rec.specularColor.g) * (light.GreenIntensity) * cosAlpha);
+                    double pixB = ((rec.diffuseColor.b) * (light.BlueIntensity) * cosTheta) ;//+ ((rec.specularColor.b) * (light.BlueIntensity) * cosAlpha);
+                    Pixel p = RGBColor(pixR, pixG, pixB);
+                    cam.vp->drawPixel(p, y, x);
+                    // cam.vp->drawPixel(w.objects[i]->color, y, x);
+
                     // cam.vp->drawPixel((w.objects[i]->color)), y, x);
                 }
             }
@@ -98,26 +107,4 @@ void buildScene(World &w)
         p->color = RGBColor((float)rand() / RAND_MAX, (float)rand() / RAND_MAX, (float)rand() / RAND_MAX);
         w.objects.push_back(p);
     }
-}
-
-void test(void)
-{
-    // fprintf(stdout,"hi!\n");
-    Vector3 i(1.0, 0.0, 0.0);
-    Vector3 j(0.0, 1.0, 0.0);
-    Vector3 k = i ^ j;
-    k.prettyPrint();
-
-    Point3 p(10.0, 0.0, 0.0);
-    Point3 translated = p + k;
-    translated.prettyPrint();
-    Point2 p2(10.0, 0.0);
-    Point2 scaled = p2 * 2;
-    Point2 scaled2 = 2 * p2;
-    scaled2.prettyPrint();
-    scaled.prettyPrint();
-
-    Normal3 n(2.0);
-    n.prettyPrint();
-    Ray r(p, i);
 }

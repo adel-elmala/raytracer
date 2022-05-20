@@ -13,7 +13,7 @@ public:
     unsigned int channelsPerPixel;
     float pixelSize;
     unsigned int nSamplesPerPixel;
-    std::vector<Pixel> pixelsArray;
+    // std::vector<Pixel> pixelsArray;
     unsigned char *pImgData;
 
     ViewPlane(void);

@@ -10,7 +10,7 @@ public:
 
     Sphere();
     ~Sphere();
-    virtual bool hit(const Ray &ray, double &tmin) const;
+    virtual bool hit(const Ray &ray, double &tmin,ShadeRec& Rec) const;
 
 };
 

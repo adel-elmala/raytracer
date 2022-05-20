@@ -9,5 +9,5 @@ World::~World()
     {
         delete objects[i];
     }
-    
+    camera.~Camera();
 }

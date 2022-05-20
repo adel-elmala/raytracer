@@ -2,13 +2,15 @@
 
 Sphere::Sphere()
 {
+    specularColor = RGBColor(0.5, 0.5, 0.5);
+    PhongExponent = 100;
 }
 
 Sphere::~Sphere()
 {
 }
 
-bool Sphere::hit(const Ray &ray, double &tmin) const
+bool Sphere::hit(const Ray &ray, double &tmin, ShadeRec &Rec) const
 {
     Vector3 temp = ray.origin - center;
     double a = ray.direction * ray.direction;
@@ -25,12 +27,26 @@ bool Sphere::hit(const Ray &ray, double &tmin) const
         if ((t > KEpsilon) && (t <= tmin))
         {
             tmin = t;
+            Rec.tmin = t;
+            Rec.hitPoint = ray.origin + t * ray.direction;
+            Vector3 n = (Rec.hitPoint - center).hat();
+            Rec.n = Normal3(n.m_x, n.m_y, n.m_z);
+            Rec.diffuseColor = this->color;
+            Rec.specularColor = this->specularColor;
+            Rec.phongExponent = this->PhongExponent;
             return true;
         }
         t = (-b + e) / denom; // big root
         if ((t > KEpsilon) && (t <= tmin))
         {
             tmin = t;
+            Rec.tmin = t;
+            Rec.hitPoint = ray.origin + t * ray.direction;
+            Vector3 n = (Rec.hitPoint - center).hat();
+            Rec.n = Normal3(n.m_x, n.m_y, n.m_z);
+            Rec.diffuseColor = this->color;
+            Rec.specularColor = this->specularColor;
+            Rec.phongExponent = this->PhongExponent;
             return true;
         }
 
