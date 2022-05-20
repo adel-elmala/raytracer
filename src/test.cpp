@@ -6,6 +6,7 @@
 #include "Ray.h"
 
 #include "Sphere.h"
+#include "Plane.h"
 #include "Camera.h"
 #include "Light.h"
 #include "ShadeRec.h"
@@ -27,8 +28,8 @@ int main(int argc, const char *argv[])
     cam.vp->distance = 500;
     cam.setup_uvw();
 
-    // light
-    Light light;
+    // // light
+    // Light light;
 
     // build World
     World w;
@@ -60,7 +61,7 @@ int main(int argc, const char *argv[])
                 if (w.objects[i]->hit(r, tmin, rec))
                 {
                     hit = true;
-                    Vector3 lightDir = (light.pos - rec.hitPoint).hat();
+                    Vector3 lightDir = (w.light.pos - rec.hitPoint).hat();
                     Vector3 viewDir = -((r.direction).hat());
                     Vector3 h = (lightDir + viewDir).hat();
                     double cosAlpha = (rec.n * h);
@@ -68,9 +69,9 @@ int main(int argc, const char *argv[])
                     cosAlpha = pow(cosAlpha, rec.phongExponent);
                     double cosTheta = (rec.n * lightDir);
                     cosTheta = MAX(0, cosTheta);
-                    double pixR = ((rec.diffuseColor.r) * (light.RedIntensity) * cosTheta) + ((rec.specularColor.r) * (light.RedIntensity) * cosAlpha);
-                    double pixG = ((rec.diffuseColor.g) * (light.GreenIntensity) * cosTheta) + ((rec.specularColor.g) * (light.GreenIntensity) * cosAlpha);
-                    double pixB = ((rec.diffuseColor.b) * (light.BlueIntensity) * cosTheta) + ((rec.specularColor.b) * (light.BlueIntensity) * cosAlpha);
+                    double pixR = ((rec.diffuseColor.r) * (w.light.RedIntensity) * cosTheta) + ((rec.specularColor.r) * (w.light.RedIntensity) * cosAlpha);
+                    double pixG = ((rec.diffuseColor.g) * (w.light.GreenIntensity) * cosTheta) + ((rec.specularColor.g) * (w.light.GreenIntensity) * cosAlpha);
+                    double pixB = ((rec.diffuseColor.b) * (w.light.BlueIntensity) * cosTheta) + ((rec.specularColor.b) * (w.light.BlueIntensity) * cosAlpha);
                     Pixel p = RGBColor(pixR, pixG, pixB);
                     cam.vp->drawPixel(p, y, x);
                     // cam.vp->drawPixel(w.objects[i]->color, y, x);
@@ -107,4 +108,13 @@ void buildScene(World &w)
         p->color = RGBColor((float)rand() / RAND_MAX, (float)rand() / RAND_MAX, (float)rand() / RAND_MAX);
         w.objects.push_back(p);
     }
+    Plane *plane = new Plane;
+    
+    w.objects.push_back(plane);
+        Sphere *p = new Sphere;
+        p->radius = 1.0f;
+        p->center = w.light.pos + Vector3(0.0,0.0,-2.0);
+        p->color = RGBColor(1.0f,1.0f,1.0f);
+        w.objects.push_back(p);
+
 }

@@ -19,7 +19,7 @@ ViewPlane::ViewPlane(void)
 
 ViewPlane::~ViewPlane()
 {
-    printf("viewplane deconstucted!!\n");
+    // printf("viewplane deconstucted!!\n");
     free(pImgData);
     pImgData = NULL;
 }
@@ -31,13 +31,17 @@ void ViewPlane::drawPixel(Pixel p, unsigned int row, unsigned int col)
     unsigned int green = (unsigned int)(255 * p.g);
     unsigned int blue = (unsigned int)(255 * p.b);
     unsigned int alpha = (unsigned int)(255 * p.a);
-    unsigned int color = (blue << 16) | (green << 8) | (red) ;
+    unsigned int color = (blue << 16) | (green << 8) | (red);
+    // unsigned char *pImgDataEnd = ((unsigned char *)pImgData + (((nRows * nCols)) * channelsPerPixel));
+    // *(unsigned int *)((unsigned char *)pImgDataEnd - (((row * nCols) + col) * channelsPerPixel)) = color;
     *(unsigned int *)((unsigned char *)pImgData + (((row * nCols) + col) * channelsPerPixel)) = color;
 }
 
 void ViewPlane::drawImg(void)
 {
+
     char const *filename = "Sphere.png";
+    stbi_flip_vertically_on_write(1);
     // memset((void*)pImgData,0x00,481*721*3*sizeof(unsigned char));
     stbi_write_png(filename, nCols, nRows, channelsPerPixel, (const void *)pImgData, (unsigned int)sizeof(unsigned char) * channelsPerPixel * nCols);
 }

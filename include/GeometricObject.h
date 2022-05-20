@@ -12,9 +12,6 @@ class GeometricObject
 {
 
 public:
-    // GeometricObject(const RGBColor& col);
-    // GeometricObject(const GeometricObject& object);
-    // GeometricObject& operator=(const GeometricObject& rhs);
     GeometricObject(void);
     ~GeometricObject();
     

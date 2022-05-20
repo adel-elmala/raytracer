@@ -14,9 +14,9 @@ test: src/test.cpp \
 	src/ViewPlane.cpp include/ViewPlane.h \
 	src/GeometricObject.cpp include/GeometricObject.h \
 	src/Sphere.cpp include/Sphere.h \
-	src/Light.cpp include/Light.h
+	src/Light.cpp include/Light.h src/Plane.cpp include/Plane.h
 
-	$(CC) $(FLAGS) $(INCLUDE) src/test.cpp src/Light.cpp src/Sphere.cpp src/GeometricObject.cpp  src/ViewPlane.cpp src/World.cpp src/Camera.cpp src/RGBColor.cpp src/Vector3.cpp src/Point3.cpp src/Point2.cpp src/Normal3.cpp src/Ray.cpp -o ./bin/$@
+	$(CC) $(FLAGS) $(INCLUDE) src/test.cpp src/Light.cpp src/Plane.cpp src/Sphere.cpp src/GeometricObject.cpp  src/ViewPlane.cpp src/World.cpp src/Camera.cpp src/RGBColor.cpp src/Vector3.cpp src/Point3.cpp src/Point2.cpp src/Normal3.cpp src/Ray.cpp -o ./bin/$@
 
 
 

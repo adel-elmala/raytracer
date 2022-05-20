@@ -3,6 +3,7 @@
 #include <vector>
 #include "GeometricObject.h"
 #include "Camera.h"
+#include "Light.h"
 
 
 class World
@@ -10,6 +11,7 @@ class World
 public:
     std::vector<GeometricObject*> objects;
     Camera camera;
+    Light light;
     RGBColor backGroundColor;
     
     
