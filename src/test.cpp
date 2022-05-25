@@ -17,6 +17,7 @@ const double PI = 3.14159265359;
 #define MAX(n, m) (n >= m ? n : m)
 
 void buildScene(World &w);
+RGBColor shade(World &w, ShadeRec &rec, Ray &r);
 
 int main(int argc, const char *argv[])
 {
@@ -27,9 +28,6 @@ int main(int argc, const char *argv[])
     cam.lookAt = Point3(0.0, 0.0, -30.0);
     cam.vp->distance = 500;
     cam.setup_uvw();
-
-    // // light
-    // Light light;
 
     // build World
     World w;
@@ -61,18 +59,8 @@ int main(int argc, const char *argv[])
                 if (w.objects[i]->hit(r, tmin, rec))
                 {
                     hit = true;
-                    Vector3 lightDir = (w.light.pos - rec.hitPoint).hat();
-                    Vector3 viewDir = -((r.direction).hat());
-                    Vector3 h = (lightDir + viewDir).hat();
-                    double cosAlpha = (rec.n * h);
-                    cosAlpha = MAX(0, cosAlpha);
-                    cosAlpha = pow(cosAlpha, rec.phongExponent);
-                    double cosTheta = (rec.n * lightDir);
-                    cosTheta = MAX(0, cosTheta);
-                    double pixR = ((rec.diffuseColor.r) * (w.light.RedIntensity) * cosTheta) + ((rec.specularColor.r) * (w.light.RedIntensity) * cosAlpha);
-                    double pixG = ((rec.diffuseColor.g) * (w.light.GreenIntensity) * cosTheta) + ((rec.specularColor.g) * (w.light.GreenIntensity) * cosAlpha);
-                    double pixB = ((rec.diffuseColor.b) * (w.light.BlueIntensity) * cosTheta) + ((rec.specularColor.b) * (w.light.BlueIntensity) * cosAlpha);
-                    Pixel p = RGBColor(pixR, pixG, pixB);
+                    rec.objectIndex = i;
+                    Pixel p = shade(w, rec, r);
                     cam.vp->drawPixel(p, y, x);
                     // cam.vp->drawPixel(w.objects[i]->color, y, x);
 
@@ -111,10 +99,46 @@ void buildScene(World &w)
     Plane *plane = new Plane;
     
     w.objects.push_back(plane);
-        Sphere *p = new Sphere;
-        p->radius = 1.0f;
-        p->center = w.light.pos + Vector3(0.0,0.0,-2.0);
-        p->color = RGBColor(1.0f,1.0f,1.0f);
-        w.objects.push_back(p);
+    Sphere *p = new Sphere;
+    p->radius = 1.0f;
+    p->center = w.light.pos + Vector3(0.0, 0.0, -2.0);
+    p->color = RGBColor(1.0f, 1.0f, 1.0f);
+    w.objects.push_back(p);
+}
 
+RGBColor shade(World &w, ShadeRec &rec, Ray &r)
+{
+    Vector3 lightDir = (w.light.pos - rec.hitPoint).hat();
+    Vector3 viewDir = -((r.direction).hat());
+    Vector3 h = (lightDir + viewDir).hat();
+    double cosAlpha = (rec.n * h);
+    cosAlpha = MAX(0, cosAlpha);
+    cosAlpha = pow(cosAlpha, rec.phongExponent);
+    double cosTheta = (rec.n * lightDir);
+    cosTheta = MAX(0, cosTheta);
+
+    // with ambient-light
+    double pixR = ((rec.diffuseColor.r) * (w.light.AmbientRedIntensity));
+    double pixG = ((rec.diffuseColor.g) * (w.light.AmbientGreenIntensity));
+    double pixB = ((rec.diffuseColor.b) * (w.light.AmbientBlueIntensity));
+
+    // shadowRay
+    Ray sr = Ray(rec.hitPoint + (KEpsilon * w.light.dir), w.light.dir);
+    for (int i = w.objects.size() - 1; i > 0; --i)
+    {
+        double t = DBL_MAX;
+        ShadeRec srec;
+        if (w.objects[i]->hit(sr, t, srec) && (i != rec.objectIndex))
+
+            return RGBColor(pixR, pixG, pixB);
+    }
+    pixR += ((rec.diffuseColor.r) * (w.light.RedIntensity) * cosTheta) + ((rec.specularColor.r) * (w.light.RedIntensity) * cosAlpha);
+    pixG += ((rec.diffuseColor.g) * (w.light.GreenIntensity) * cosTheta) + ((rec.specularColor.g) * (w.light.GreenIntensity) * cosAlpha);
+    pixB += ((rec.diffuseColor.b) * (w.light.BlueIntensity) * cosTheta) + ((rec.specularColor.b) * (w.light.BlueIntensity) * cosAlpha);
+    // no ambient-light
+    // double pixR = ((rec.diffuseColor.r) * (w.light.RedIntensity) * cosTheta) + ((rec.specularColor.r) * (w.light.RedIntensity) * cosAlpha);
+    // double pixG = ((rec.diffuseColor.g) * (w.light.GreenIntensity) * cosTheta) + ((rec.specularColor.g) * (w.light.GreenIntensity) * cosAlpha);
+    // double pixB = ((rec.diffuseColor.b) * (w.light.BlueIntensity) * cosTheta) + ((rec.specularColor.b) * (w.light.BlueIntensity) * cosAlpha);
+
+    return RGBColor(pixR, pixG, pixB);
 }

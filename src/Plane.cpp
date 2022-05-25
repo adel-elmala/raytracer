@@ -2,7 +2,7 @@
 
 Plane::Plane()
 {
-    p = Point3(0.0,-10.0,0.0);
+    p = Point3(0.0,-50.0,0.0);
     n = Normal3(0.0, 1.0, 0.0);
     color = RGBColor(0.6f, 0.3f, 0.4f);
     specularColor = RGBColor(0.5, 0.5, 0.5);

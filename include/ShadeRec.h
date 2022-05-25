@@ -11,10 +11,9 @@ struct ShadeRec
     RGBColor diffuseColor;
     RGBColor specularColor;
     Normal3 n;
-    float  phongExponent;
+    float phongExponent;
     double tmin;
-
+    int objectIndex;
 };
-
 
 #endif

@@ -8,14 +8,16 @@ class Light
 {
 public:
     Point3 pos;
-    Vector3 dir; // to be used later 
-    float RedIntensity; // [0,1] range
+    Vector3 dir;          // to be used later
+    float RedIntensity;   // [0,1] range
     float GreenIntensity; // [0,1] range
-    float BlueIntensity; // [0,1] range
+    float BlueIntensity;  // [0,1] range
+    float AmbientRedIntensity;   // [0,1] range
+    float AmbientGreenIntensity; // [0,1] range
+    float AmbientBlueIntensity;  // [0,1] range
 
     Light();
     ~Light();
-    
 };
 
 #endif
