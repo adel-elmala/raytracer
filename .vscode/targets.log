@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Wed May 25 15:57:54 2022
+# Make data base, printed on Wed May 25 16:32:01 2022
 
 # Variables
 
@@ -173,7 +173,7 @@ USER = adel
 # environment
 LC_MONETARY = en_CA.UTF-8
 # makefile
-.DEFAULT_GOAL := test
+.DEFAULT_GOAL := rayTracer
 # makefile (from '/media/adel/1E9A1F939A1F6695/cs-path/gameDev/computerGraphics/raytracer/Makefile', line 5)
 INCLUDE = -I ./include
 # environment
@@ -296,6 +296,7 @@ include/GeometricObject.h:
 #  File has not been updated.
 
 # Not a target:
+ 
 all:
 #  Command line target.
 #  Implicit rule search has been done.
@@ -303,7 +304,6 @@ all:
 #  File has not been updated.
 
 .PHONY: setup,clean
- 
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
@@ -344,13 +344,6 @@ src/GeometricObject.cpp:
 #  Modification time never checked.
 #  File has not been updated.
 
-test: src/test.cpp src/Vector3.cpp include/Vector3.h src/Point3.cpp include/Point3.h src/Point2.cpp include/Point2.h src/Normal3.cpp include/Normal3.h src/World.cpp include/World.h src/Camera.cpp include/Camera.h src/ViewPlane.cpp include/ViewPlane.h src/GeometricObject.cpp include/GeometricObject.h src/Sphere.cpp include/Sphere.h src/Light.cpp include/Light.h src/Plane.cpp include/Plane.h
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-#  recipe to execute (from '/media/adel/1E9A1F939A1F6695/cs-path/gameDev/computerGraphics/raytracer/Makefile', line 19):
-	$(CC) $(FLAGS) $(INCLUDE) src/test.cpp src/Light.cpp src/Plane.cpp src/Sphere.cpp src/GeometricObject.cpp  src/ViewPlane.cpp src/World.cpp src/Camera.cpp src/RGBColor.cpp src/Vector3.cpp src/Point3.cpp src/Point2.cpp src/Normal3.cpp src/Ray.cpp -o ./bin/$@
-
 # Not a target:
 include/ViewPlane.h:
 #  Implicit rule search has not been done.
@@ -387,6 +380,13 @@ src/Light.cpp:
 #  Modification time never checked.
 #  File has not been updated.
 
+rayTracer: src/rayTracer.cpp src/Vector3.cpp include/Vector3.h src/Point3.cpp include/Point3.h src/Point2.cpp include/Point2.h src/Normal3.cpp include/Normal3.h src/World.cpp include/World.h src/Camera.cpp include/Camera.h src/ViewPlane.cpp include/ViewPlane.h src/GeometricObject.cpp include/GeometricObject.h src/Sphere.cpp include/Sphere.h src/Light.cpp include/Light.h src/Plane.cpp include/Plane.h
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from '/media/adel/1E9A1F939A1F6695/cs-path/gameDev/computerGraphics/raytracer/Makefile', line 19):
+	$(CC) $(FLAGS) $(INCLUDE) src/rayTracer.cpp src/Light.cpp src/Plane.cpp src/Sphere.cpp src/GeometricObject.cpp  src/ViewPlane.cpp src/World.cpp src/Camera.cpp src/RGBColor.cpp src/Vector3.cpp src/Point3.cpp src/Point2.cpp src/Normal3.cpp src/Ray.cpp -o ./bin/$@
+
 # Not a target:
 src/Camera.cpp:
 #  Implicit rule search has not been done.
@@ -400,13 +400,13 @@ src/Camera.cpp:
 #  File has not been updated.
 
 # Not a target:
-src/ViewPlane.cpp:
+src/rayTracer.cpp:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
 
 # Not a target:
-include/Point3.h:
+src/ViewPlane.cpp:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
@@ -445,7 +445,7 @@ include/World.h:
 # Not a target:
 /media/adel/1E9A1F939A1F6695/cs-path/gameDev/computerGraphics/raytracer/Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-20 17:59:19.3614079
+#  Last modified 2022-05-25 16:30:56.3039839
 #  File has been updated.
 #  Successfully updated.
 
@@ -460,28 +460,28 @@ valgrind:
 #  Modification time never checked.
 #  File has not been updated.
 #  recipe to execute (from '/media/adel/1E9A1F939A1F6695/cs-path/gameDev/computerGraphics/raytracer/Makefile', line 29):
-	valgrind --leak-check=full --show-leak-kinds=all ./bin/test
+	valgrind --leak-check=full --show-leak-kinds=all ./bin/rayTracer
 
 # Not a target:
-src/test.cpp:
+include/Point3.h:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
 
 # files hash-table stats:
-# Load=33/1024=3%, Rehash=0, Collisions=3/67=4%
+# Load=33/1024=3%, Rehash=0, Collisions=1/67=1%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 35 / storage = 568 B / avg = 16 B
-# current buf: size = 8162 B / used = 568 B / count = 35 / avg = 16 B
+# strcache buffers: 1 (0) / strings = 35 / storage = 578 B / avg = 16 B
+# current buf: size = 8162 B / used = 578 B / count = 35 / avg = 16 B
 
 # strcache performance: lookups = 43 / hit rate = 18%
 # hash-table stats:
 # Load=35/8192=0%, Rehash=0, Collisions=0/43=0%
-# Finished Make data base on Wed May 25 15:57:54 2022
+# Finished Make data base on Wed May 25 16:32:01 2022
 
  

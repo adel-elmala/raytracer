@@ -20,6 +20,10 @@ rayTracer: src/rayTracer.cpp \
 
 
 
+
+testBed: src/testBed.cpp src/Matrix3.cpp include/Matrix3.h 
+	$(CC) $(FLAGS) $(INCLUDE) src/testBed.cpp src/Matrix3.cpp src/Vector3.cpp -o ./bin/$@ 
+
 setup:
 	mkdir -p ./bin ./include ./src
 
