@@ -35,9 +35,9 @@ int main(int argc, const char *argv[])
     w.backGroundColor = RGBColor(0.2f, 0.2f, 0.2f);
     w.camera = cam;
 
-    for (int x = 0; x < (cam.vp->nCols); ++x)
+    for (int y = 0; y < (cam.vp->nRows); ++y) // loop on  rows
     {
-        for (int y = 0; y < (cam.vp->nRows); ++y)
+        for (int x = 0; x < (cam.vp->nCols); ++x) // loop on  cols
         {
             Ray r;
             float xPix = cam.vp->pixelSize * (x - (((cam.vp->nCols)) / 2.0) + 0.5);
@@ -60,12 +60,15 @@ int main(int argc, const char *argv[])
                 {
                     hit = true;
                     rec.objectIndex = i;
-                    Pixel p = shade(w, rec, r);
-                    cam.vp->drawPixel(p, y, x);
                     // cam.vp->drawPixel(w.objects[i]->color, y, x);
 
                     // cam.vp->drawPixel((w.objects[i]->color)), y, x);
                 }
+            }
+            if (hit)
+            {
+                Pixel p = shade(w, rec, r);
+                cam.vp->drawPixel(p, y, x);
             }
             if (!hit)
                 cam.vp->drawPixel(w.backGroundColor, y, x);
@@ -97,7 +100,7 @@ void buildScene(World &w)
         w.objects.push_back(p);
     }
     Plane *plane = new Plane;
-    
+
     w.objects.push_back(plane);
     Sphere *p = new Sphere;
     p->radius = 1.0f;
@@ -128,7 +131,7 @@ RGBColor shade(World &w, ShadeRec &rec, Ray &r)
     {
         double t = DBL_MAX;
         ShadeRec srec;
-        if (w.objects[i]->hit(sr, t, srec) && (i != rec.objectIndex))
+        if ((i != rec.objectIndex) && w.objects[i]->hit(sr, t, srec))
 
             return RGBColor(pixR, pixG, pixB);
     }
